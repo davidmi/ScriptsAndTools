@@ -11,7 +11,7 @@ if not "%1" == "" (
 	REM ## CLEAR THE CLIPBOARD ##
 	echo "" | clip
 )
-if not defined 1 (
+if "%1" == "" (
 	REM ## SHOW THE PASSWORD STORE DIRECTORY LISTING ##
 	tree /f %PASSWORD_STORE%
 ) 
