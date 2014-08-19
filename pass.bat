@@ -5,8 +5,8 @@ if not "%1" == "" (
 	echo gpg -d %PASSWORD_STORE%\%1
 	gpg -d %PASSWORD_STORE%\%1.gpg | clip
 
-	REM ## WAIT 30 SECONDS ## 
-	PING 1.1.1.1 -n 1 -w 30000 >NUL
+	REM ## WAIT 10 SECONDS ## 
+	PING 1.1.1.1 -n 1 -w 10000 >NUL
 	
 	REM ## CLEAR THE CLIPBOARD ##
 	echo "" | clip
