@@ -1,5 +1,5 @@
 @echo off
-set PASSWORD_STORE=C:\Users\David\.password-store
+set PASSWORD_STORE=C:\Users\%USERNAME%\.password-store
 if not "%1" == "" (
 	REM ## COPY THE KEY TO THE CLIPBOARD ##
 	echo gpg -d %PASSWORD_STORE%\%1
