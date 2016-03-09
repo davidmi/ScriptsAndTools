@@ -16,3 +16,9 @@ Then `pass.bat` will tree-list all the passwords in the directory and `pass.bat 
 gpg-decrypt and copy the password to the clipboard, wait 40 seconds, and then clear the clipboard.
 Adding it to the `%PATH%` allows a very similar experience to pass's in cmd, albeit that password creation
 is as yet unsupported.
+
+difference/intersection
+----
+
+Two small python script to print out the lines present in file 1 that are not in file two,
+and to print out the lines common to file 1 and file 2, respectively. Ordering is not guaranteed.

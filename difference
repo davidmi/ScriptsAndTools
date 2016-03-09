@@ -1,0 +1,22 @@
+#!/usr/bin/python
+from __future__ import print_function
+
+import argparse
+import sys
+
+parser = argparse.ArgumentParser(description="Find the lines in one file which are not in a second file")
+parser.add_argument("file1", metavar="F", type=str, help="First file or - for stdin")
+parser.add_argument("file2", metavar="G", type=str, help="Second file or - for stdin")
+
+args = parser.parse_args()
+
+file1 = sys.stdin if args.file1 == '-' else open(args.file1, "r") 
+file2 = sys.stdin if args.file2 == '-' else open(args.file2, "r") 
+
+lines_1 = set(file1.readlines())
+lines_2 = set(file2.readlines())
+
+intersection = lines_1.difference(lines_2)
+
+for line in intersection:
+    print(line, end='')
