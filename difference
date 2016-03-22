@@ -13,8 +13,8 @@ args = parser.parse_args()
 file1 = sys.stdin if args.file1 == '-' else open(args.file1, "r") 
 file2 = sys.stdin if args.file2 == '-' else open(args.file2, "r") 
 
-lines_1 = set(file1.readlines())
-lines_2 = set(file2.readlines())
+lines_1 = set([x.strip() + '\n' for x in file1.readlines()])
+lines_2 = set([x.strip() + '\n' for x in file2.readlines()])
 
 intersection = lines_1.difference(lines_2)
 
